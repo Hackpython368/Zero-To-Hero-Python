@@ -20,9 +20,9 @@ This repository contains 10 Python projects that range from beginner to advanced
 ---
 
 ## Intermediate Level
-### 4. Library Management System (Tkinter)
+### 4. Library Management System (Flask)
 - A GUI-based system that allows users to add books, borrow them, and return them.  
-- Uses `Tkinter` for UI and `SQLite` for storing book records.
+- Uses `Flask` for UI and `MySQL` for storing book records.
 
 ### 5. Weather App (Flask)
 - A web application that fetches real-time weather data from an API and displays it.  

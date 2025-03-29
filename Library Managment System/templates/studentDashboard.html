@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <div class="w-64 bg-gray-800 p-6">
+            <h2 class="text-2xl font-bold text-center mb-6">Library Dashboard</h2>
+            <ul class="space-y-4">
+                <li><a href="/StudentDashBoard"  class="block p-3 bg-gray-700 rounded-lg hover:bg-gray-600">Home</a></li>
+                <li><a href="/StudentDashBoard/Books" class="block p-3 bg-gray-700 rounded-lg hover:bg-gray-600">My Books</a></li>
+                <li><a href="/StudentDashBoard/Borrowed" class="block p-3 bg-gray-700 rounded-lg hover:bg-gray-600">Borrowed Books</a></li>
+                <li><a href="/StudentDashBoard/Profile" class="block p-3 bg-gray-700 rounded-lg hover:bg-gray-600">Profile</a></li>
+                <li><a href="/Login" class="block p-3 bg-red-600 rounded-lg hover:bg-red-500">Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 p-8">
+            <h2 class="text-3xl font-bold mb-6">Welcome, Student!</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold">Total Books</h3>
+                    <p class="text-3xl mt-2">120</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold">Books Borrowed</h3>
+                    <p class="text-3xl mt-2">5</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold">Pending Returns</h3>
+                    <p class="text-3xl mt-2">2</p>
+                </div>
+            </div>
+
+            <!-- Recent Borrowed Books -->
+            <h2 class="text-2xl font-bold mt-8 mb-4">Recently Borrowed Books</h2>
+            <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                <table class="w-full text-left">
+                    <thead>
+                        <tr class="border-b border-gray-600">
+                            <th class="p-3">Book Title</th>
+                            <th class="p-3">Borrow Date</th>
+                            <th class="p-3">Return Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-700">
+                            <td class="p-3">Introduction to Python</td>
+                            <td class="p-3">2025-03-25</td>
+                            <td class="p-3">2025-04-10</td>
+                        </tr>
+                        <tr class="border-b border-gray-700">
+                            <td class="p-3">Web Development Basics</td>
+                            <td class="p-3">2025-03-22</td>
+                            <td class="p-3">2025-04-08</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
