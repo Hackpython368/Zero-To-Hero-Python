@@ -52,11 +52,22 @@ def home():
 
 @app.route('/StudentDashBoard')
 def studentDashboard():
-    if 'home' in request.form:
-        print("Redirecting to home page")
     return render_template('studentDashboard.html')
 
+@app.route('/StudentDashBoard/Books')
+def books():
+    cursor.execute("SELECT * FROM books")
+    data = cursor.fetchall()
+    return render_template('books.html',books=data)
 
+@app.route('/StudentDashBoard/Borrowed')
+def borrowed():
+    return render_template('BorrowedBook.html')
+
+@app.route('/StudentDashBoard/Profile')
+def profile():
+    cursor.execute("SELECT * FROM USERS where email = 'hNlJ8@example.com'")
+    return render_template('StudentProfile.html')
 
 @app.route('/signUp' ,methods=['GET', 'POST'])
 def signUp():

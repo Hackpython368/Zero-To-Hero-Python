@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <div class="w-64 bg-gray-800 p-6">
+            <h2 class="text-2xl font-bold text-center mb-6">Library Dashboard</h2>
+            <ul class="space-y-4">
+                <li><a href="/StudentDashBoard" class="block p-3 bg-gray-700 rounded-lg hover:bg-gray-600">Home</a></li>
+                <li><a href="/StudentDashBoard/Books" class="block p-3 bg-gray-700 rounded-lg hover:bg-gray-600">Books</a></li>
+                <li><a href="/StudentDashBoard/Borrowed" class="block p-3 bg-gray-700 rounded-lg hover:bg-gray-600">Borrowed Books</a></li>
+                <li><a href="/StudentDashBoard/Profile" class="block p-3 bg-blue-600 rounded-lg">Profile</a></li>
+                <li><a href="/Login" class="block p-3 bg-red-600 rounded-lg hover:bg-red-500">Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 p-8">
+            <h2 class="text-3xl font-bold mb-6">My Profile</h2>
+            <div class="bg-gray-800 p-6 rounded-xl shadow-lg max-w-lg mx-auto">
+                <div class="flex items-center space-x-4 mb-6">
+                    <img src="https://via.placeholder.com/80" alt="Profile Picture" class="w-20 h-20 rounded-full border-2 border-gray-600">
+                    <div>
+                        <h3 class="text-xl font-bold">John Doe</h3>
+                        <p class="text-gray-400">Student</p>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-gray-400">Full Name</label>
+                        <input type="text" value="John Doe" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:ring-2 focus:ring-blue-500" readonly>
+                    </div>
+                    <div>
+                        <label class="block text-gray-400">Email</label>
+                        <input type="email" value="john@example.com" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:ring-2 focus:ring-blue-500" readonly>
+                    </div>
+                    <div>
+                        <label class="block text-gray-400">Password</label>
+                        <input type="password" value="********" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:ring-2 focus:ring-blue-500" readonly>
+                    </div>
+                    <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition">Edit Profile</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

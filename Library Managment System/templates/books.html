@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <div class="w-64 bg-gray-800 p-6">
+            <h2 class="text-2xl font-bold text-center mb-6">Library Dashboard</h2>
+            <ul class="space-y-4">
+                <li><a href="/StudentDashBoard" class="block p-3 bg-gray-700 rounded-lg hover:bg-gray-600">Home</a></li>
+                <li><a href="/StudentDashBoard/Books" class="block p-3 bg-blue-600 rounded-lg">Books</a></li>
+                <li><a href="/StudentDashBoard/Borrowed" class="block p-3 bg-gray-700 rounded-lg hover:bg-gray-600">Borrowed Books</a></li>
+                <li><a href="/StudentDashBoard/Profile" class="block p-3 bg-gray-700 rounded-lg hover:bg-gray-600">Profile</a></li>
+                <li><a href="/Login" class="block p-3 bg-red-600 rounded-lg hover:bg-red-500">Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 p-8">
+            <h2 class="text-3xl font-bold mb-6">Available Books</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+
+
+                {% for book in books %}
+
+                <!-- Book Card 1 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold">{{ book[1] }}</h3>
+                    <p class="text-gray-400 mt-2">Author: {{ book[2] }}</p>
+                    <p class="text-gray-400">Available Copies: {{ book[4] }}</p>
+                    <button class="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg transition">Borrow</button>
+                </div>
+                {% endfor %}
+
+
+
+
+
+                <!-- Book Card 2
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold">Web Development Basics</h3>
+                    <p class="text-gray-400 mt-2">Author: Alice Smith</p>
+                    <p class="text-gray-400">Available Copies: 3</p>
+                    <button class="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg transition">Borrow</button>
+                </div>
+                <!-- Book Card 3 
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold">Data Science Essentials</h3>
+                    <p class="text-gray-400 mt-2">Author: Robert Brown</p>
+                    <p class="text-gray-400">Available Copies: 2</p>
+                    <button class="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg transition">Borrow</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
